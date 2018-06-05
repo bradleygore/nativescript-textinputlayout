@@ -11,7 +11,8 @@
     }
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && npm run ngc",
+    "ngc": "ngc --project tsconfig.aot.json",
     "demo.android": "npm run preparedemo; cd demo; tns run android",
     "debug.android": "npm run preparedemo; cd demo; tns debug android --emulator --debug-brk",
     "demo.ios": "npm run preparedemo; cd demo; tns run ios",
@@ -41,13 +42,25 @@
   "homepage": "https://github.com/bradleygore/nativescript-textinputlayout",
   "readmeFilename": "README.md",
   "devDependencies": {
+    "@angular/common": "^5.2.11",
+    "@angular/compiler": "^5.2.11",
+    "@angular/compiler-cli": "^5.2.11",
+    "@angular/core": "^5.2.11",
+    "@angular/forms": "^5.2.11",
+    "@angular/http": "^5.2.11",
+    "@angular/platform-browser": "^5.2.11",
+    "@angular/platform-browser-dynamic": "^5.2.11",
+    "@angular/router": "^5.2.11",
     "babel-traverse": "6.22.1",
     "babel-types": "6.22.0",
     "babylon": "6.15.0",
     "lazy": "1.0.11",
-    "tns-core-modules": "^3.0.0",
+    "nativescript-angular": "^5.3.0",
+    "rxjs": "~5.5.0",
+    "tns-core-modules": "^4.0.0",
     "tns-platform-declarations": "^3.0.0",
-    "typescript": "2.3.4"
+    "typescript": "2.4.0",
+    "zone.js": "~0.8.9"
   },
   "peerDependencies": {
     "tns-core-modules": "^3.0.0"

@@ -158,6 +158,60 @@ iconMarginLeft | Margin on the left of the icon | Number | *pod's default*
 iconMarginBottom | Margin on the bottom of the icon | Number | *pod's default*
 iconRotationDegrees | Amount to rotate the icon | Number | *pod's default*
 
+## Usage in Angular
+
+To use it with Angular simply import `TextInputLayoutModule`:
+
+```
+import { TextInputLayoutModule } from "nativescript-textinputlayout/angular";
+// ......
+@NgModule({
+    // ......
+    imports: [
+        // ......
+        TextInputLayoutModule,
+        // ......
+    ],
+    // ......
+})
+```
+
+And then use it with the tags `TextInputLayout` and `TextInputLayoutWithIcon`:
+
+```xml
+<ios>
+    <TextInputLayout
+        [hint]="hint"
+        [isEnabled]="isEnabled"
+        disabledColor="#c3c3c3"
+        [(ngModel)]="text"
+        [error]="error"
+        [title]="title"
+        [color]="error ? '#aa0000' : '#d745ff'"
+        tintColor="#d745ff"
+        lineColor="#d745ff"
+        selectedTitleColor="#ff45ca"
+        selectedLineColor="#7a45ff"
+        lineHeight="1.25"
+        selectedLineHeight="3.5"></TextInputLayout>
+</ios>
+<android>
+    <TextInputLayout class="demo-text-input-layout"
+            [hint]="hint"
+            [error]="error"
+            [errorEnabled]="isErrorEnabled"
+            [hintAnimationEnabled]="isHintAnimationEnabled"
+            hintTextAppearance="SpecialTextInputLayout"
+            errorTextAppearance="SpecialErrorTextInputLayout"
+            [counterEnabled]="isCounterEnabled">
+
+            <!--ONE child element can be added, MUST be either TextField or TextView-->
+            <TextField  [(ngModel)]="text"></TextField>
+        </TextInputLayout>
+</android>
+```
+
+
 #### Demo
 
 To run the demo locally, run the following commands from the root folder after pulling down this repo:

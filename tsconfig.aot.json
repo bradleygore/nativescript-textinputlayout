@@ -1,0 +1,39 @@
+
+{
+	"compilerOptions": {
+		"baseUrl": "./",
+		"outDir": "./angular/",
+		"sourceMap": false,
+		"declaration": true,
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"target": "es5",
+		"typeRoots": [
+			"node_modules/@types"
+		],
+		"lib": [
+			"es2017",
+			"dom"
+		],
+		"paths": {
+			"@angular/*": [
+				"./node_modules/@angular/*"
+            ],
+            "tns-core-modules":[
+                "./node_modules/tns-core-modules/*"
+            ]
+		}
+	},
+	"angularCompilerOptions": {
+		"skipTemplateCodegen": true
+	},
+	"include": [
+		"./angular/"
+	],
+	"exclude": [
+		"**/**.spec.ts",
+        "**/platforms/*",
+        "**/node_modules/*"
+	]
+}
