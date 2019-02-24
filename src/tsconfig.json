@@ -5,7 +5,6 @@
         "noImplicitAny": false,
         "removeComments": true,
         "preserveConstEnums": true,
-        "sourceMap": false,
         "declaration": false,
         "noLib": false,
         "noEmitHelpers": true,
@@ -20,6 +19,9 @@
             "*": [
                 "./node_modules/tns-core-modules/*",
                 "./node_modules/*"
+            ],
+            "~/*": [
+                "app/*"
             ]
         }
     },

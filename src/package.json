@@ -1,6 +1,6 @@
 {
   "name": "nativescript-textinputlayout",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "A NativeScript plugin to provide an XML widget to implement the Material Design TextInputLayout.",
   "main": "textInputLayout",
   "typings": "textInputLayout.d.ts",
@@ -46,11 +46,9 @@
     "babel-types": "6.22.0",
     "babylon": "6.15.0",
     "lazy": "1.0.11",
-    "tns-core-modules": "^4.1.0",
-    "tns-platform-declarations": "^4.1.0",
+    "nativescript-dev-typescript": "^0.8.0",
+    "tns-core-modules": "^5.2.1",
+    "tns-platform-declarations": "^5.2.1",
     "typescript": "^2.9.2"
-  },
-  "peerDependencies": {
-    "tns-core-modules": "^4.0.0"
   }
 }
